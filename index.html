@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Chill House – Gọi món</title>
+<link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+                <img src="images/LOGO.jpg" alt="Chill House Logo">
+            </div>
+    <h1> Chill House Cafe</h1>
+    <p id="tableInfo"></p>
+</header>
+
+<section class="menu" id="menu"></section>
+
+<section class="order-box">
+    <h3>🧾 Đơn của bạn</h3>
+
+    <div id="orderList" class="order-list"></div>
+
+    <div class="total">
+        Tổng tiền: <span id="total">0</span> VNĐ
+    </div>
+
+    <button class="send-btn" onclick="sendOrder()">📤 Gửi order</button>
+</section>
+
+
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyCPiwH3zOOIwvq3wYhdtISp4NoSbMmFQbY",
+    authDomain: "chill-house-cafe.firebaseapp.com",
+    databaseURL: "https://chill-house-cafe-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "chill-house-cafe",
+    storageBucket: "chill-house-cafe.appspot.com",
+    messagingSenderId: "662836837448",
+    appId: "1:662836837448:web:7420022b02b0b9b3c06c7d"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+</script>
+
+
+
+<script src="order.js"></script>
+</body>
+</html>
